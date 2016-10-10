@@ -6,7 +6,7 @@ import java.util.List;
 public class Salad {
 
     private String name;
-    private List<Vegetables> saladContent;
+    private List<Vegetable> saladContent;
 
     public Salad() {
         saladContent = new ArrayList<>();
@@ -16,15 +16,15 @@ public class Salad {
         return getSaladContent().isEmpty();
     }
 
-    public void add(Vegetables vegetables){
-        saladContent.add(vegetables);
+    public void add(Vegetable vegetable){
+        saladContent.add(vegetable);
     }
 
-    public List<Vegetables> getSaladContent() {
+    public List<Vegetable> getSaladContent() {
         return saladContent;
     }
 
-    public Vegetables getSaladContent(int index){
+    public Vegetable getSaladContent(int index){
         return saladContent.get(index);
     }
 
@@ -32,7 +32,7 @@ public class Salad {
         return saladContent.size();
     }
 
-    public void setSaladContent(List<Vegetables> saladContent) {
+    public void setSaladContent(List<Vegetable> saladContent) {
         this.saladContent = saladContent;
     }
 

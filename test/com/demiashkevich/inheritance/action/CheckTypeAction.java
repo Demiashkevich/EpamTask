@@ -1,7 +1,7 @@
 package com.demiashkevich.inheritance.action;
 
-import com.demiashkevich.inheritance.entity.FruitingVegetables;
-import com.demiashkevich.inheritance.entity.RootVegetables;
+import com.demiashkevich.inheritance.entity.FruitingVegetable;
+import com.demiashkevich.inheritance.entity.RootVegetable;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -36,10 +36,10 @@ public class CheckTypeAction {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {true, "CARROT", RootVegetables.RootType.class},
-                {false, "TOY", RootVegetables.RootType.class},
-                {true, "CUCUMBER", FruitingVegetables.FruitingType.class},
-                {false, "YOGA", FruitingVegetables.FruitingType.class}
+                {true, "CARROT", RootVegetable.RootType.class},
+                {false, "TOY", RootVegetable.RootType.class},
+                {true, "CUCUMBER", FruitingVegetable.FruitingType.class},
+                {false, "YOGA", FruitingVegetable.FruitingType.class}
         });
 
     }

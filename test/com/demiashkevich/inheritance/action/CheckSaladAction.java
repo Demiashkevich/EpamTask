@@ -1,8 +1,8 @@
 package com.demiashkevich.inheritance.action;
 
-import com.demiashkevich.inheritance.creator.CreateVegetables;
+import com.demiashkevich.inheritance.creator.CreateVegetable;
 import com.demiashkevich.inheritance.entity.Salad;
-import com.demiashkevich.inheritance.entity.Vegetables;
+import com.demiashkevich.inheritance.entity.Vegetable;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,15 +16,15 @@ public class CheckSaladAction {
 
     @Before
     public void createSalad(){
-        Vegetables vegetables1 = CreateVegetables.getVegetables(1, "CARROT", 100);
-        Vegetables vegetables2 = CreateVegetables.getVegetables(2, "RADISH", 100);
-        Vegetables vegetables3 = CreateVegetables.getVegetables(3, "DILL", 100);
-        Vegetables vegetables4 = CreateVegetables.getVegetables(4, "TOMATOES", 300);
+        Vegetable vegetable1 = CreateVegetable.getVegetable(1, "CARROT", 100);
+        Vegetable vegetable2 = CreateVegetable.getVegetable(2, "RADISH", 100);
+        Vegetable vegetable3 = CreateVegetable.getVegetable(3, "DILL", 100);
+        Vegetable vegetable4 = CreateVegetable.getVegetable(4, "TOMATO", 300);
         salad = new Salad();
-        salad.add(vegetables1);
-        salad.add(vegetables2);
-        salad.add(vegetables3);
-        salad.add(vegetables4);
+        salad.add(vegetable1);
+        salad.add(vegetable2);
+        salad.add(vegetable3);
+        salad.add(vegetable4);
     }
 
     @Test
@@ -34,7 +34,7 @@ public class CheckSaladAction {
 
     @Test
     public void checkSortByProtein(){
-        String[] saladExpected = {"RADISH", "CARROT", "TOMATOES", "DILL"};
+        String[] saladExpected = {"RADISH", "CARROT", "TOMATO", "DILL"};
         String [] saladActual = new String[salad.size()];
         action.sortByProtein(salad);
         for(int i = 0; i < salad.size(); i++) {
@@ -46,7 +46,7 @@ public class CheckSaladAction {
     @Test
     public void checkSearchByCalorific(){
         String[] saladExpected = {"RADISH", "DILL"};
-        List<Vegetables> vegetables = action.searchByCalorific(salad, 20, 35);
+        List<Vegetable> vegetables = action.searchByCalorific(salad, 20, 35);
         String[] saladActual = new String[vegetables.size()];
         for(int i = 0; i < saladActual.length; i++) {
             saladActual[i] = vegetables.get(i).getName();

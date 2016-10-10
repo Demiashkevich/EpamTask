@@ -3,7 +3,7 @@ package com.demiashkevich.inheritance.out;
 import com.demiashkevich.inheritance.action.SaladAction;
 import com.demiashkevich.inheritance.entity.Salad;
 import com.demiashkevich.inheritance.entity.Menu;
-import com.demiashkevich.inheritance.entity.Vegetables;
+import com.demiashkevich.inheritance.entity.Vegetable;
 import org.apache.log4j.Logger;
 
 import java.util.List;
@@ -33,7 +33,7 @@ public class PrintConsole {
     public void printSaladSearchByCalorific(Salad salad, int from, int to){
         LOGGER.info("SEARCH BY CALORIFIC:");
         SaladAction action = new SaladAction();
-        List<Vegetables> list = action.searchByCalorific(salad, from, to);
+        List<Vegetable> list = action.searchByCalorific(salad, from, to);
         list.forEach(LOGGER::info);
     }
 }

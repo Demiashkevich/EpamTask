@@ -1,9 +1,9 @@
 package com.demiashkevich.inheritance.action;
 
-import com.demiashkevich.inheritance.creator.CreateVegetables;
+import com.demiashkevich.inheritance.creator.CreateVegetable;
 import com.demiashkevich.inheritance.entity.Menu;
 import com.demiashkevich.inheritance.entity.Salad;
-import com.demiashkevich.inheritance.entity.Vegetables;
+import com.demiashkevich.inheritance.entity.Vegetable;
 import org.apache.log4j.Logger;
 
 import java.util.LinkedHashMap;
@@ -33,9 +33,9 @@ public class ParseFromRecipe {
             recipe = saladConsist[SALAD_PRODUCTS];
             Map<String, Float> products = this.convertProducts(recipe);
             for(Map.Entry<String, Float> product : products.entrySet()) {
-                Vegetables vegetables = CreateVegetables.getVegetables(generateVegetablesId(), product.getKey(), product.getValue());
-                if(vegetables != null) {
-                    salad.add(vegetables);
+                Vegetable vegetable = CreateVegetable.getVegetable(generateVegetablesId(), product.getKey(), product.getValue());
+                if(vegetable != null) {
+                    salad.add(vegetable);
                 }
                 if(salad.size() == products.size()) {
                     menu.add(salad);

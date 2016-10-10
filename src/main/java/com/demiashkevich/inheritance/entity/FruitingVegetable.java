@@ -1,9 +1,9 @@
 package com.demiashkevich.inheritance.entity;
 
-public class FruitingVegetables extends Vegetables {
+public class FruitingVegetable extends Vegetable {
 
     public enum FruitingType {
-        TOMATOES(14, 0.8, 3.8, 0.1), CUCUMBER(23, 1.1, 5, 0.2);
+        TOMATO(14, 0.8, 3.8, 0.1), CUCUMBER(23, 1.1, 5, 0.2);
 
         private double calorific;
         private double protein;
@@ -35,7 +35,7 @@ public class FruitingVegetables extends Vegetables {
 
     }
 
-    public FruitingVegetables(long vegetablesID, String name, float weight) {
+    public FruitingVegetable(long vegetablesID, String name, float weight) {
         super(vegetablesID, name, weight, FruitingType.valueOf(name).getCalorific(), FruitingType.valueOf(name).getProtein(),
                 FruitingType.valueOf(name).getCarbohydrates(), FruitingType.valueOf(name).getFats());
     }

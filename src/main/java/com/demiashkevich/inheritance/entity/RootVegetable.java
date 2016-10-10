@@ -1,16 +1,16 @@
 package com.demiashkevich.inheritance.entity;
 
-public class SheetVegetables extends Vegetables {
+public class RootVegetable extends Vegetable {
 
-    public enum SheetType {
-        DILL(31, 2.6, 7.6, 0.5), SPINACH(226, 2.9, 2.5, 0.3);
+    public enum RootType {
+        CARROT(226, 1.3, 7, 0.6), RADISH(21, 1.2, 4.6, 0.1);
 
         private double calorific;
         private double protein;
         private double carbohydrates;
         private double fats;
 
-        SheetType(double calorific, double protein, double carbohydrates, double fats) {
+        RootType(double calorific, double protein, double carbohydrates, double fats) {
             this.calorific = calorific;
             this.protein = protein;
             this.carbohydrates = carbohydrates;
@@ -34,9 +34,9 @@ public class SheetVegetables extends Vegetables {
         }
     }
 
-    public SheetVegetables(long vegetablesID, String name, float weight) {
-        super(vegetablesID, name, weight, SheetType.valueOf(name).getCalorific(), SheetType.valueOf(name).getProtein(),
-                SheetType.valueOf(name).getCarbohydrates(), SheetType.valueOf(name).getFats());
+    public RootVegetable(long vegetablesID, String name, float weight) {
+        super(vegetablesID, name, weight, RootType.valueOf(name).getCalorific(), RootType.valueOf(name).getProtein(),
+                RootType.valueOf(name).getCarbohydrates(), RootType.valueOf(name).getFats());
     }
     
 }

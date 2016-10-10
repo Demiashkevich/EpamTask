@@ -1,6 +1,6 @@
 package com.demiashkevich.inheritance.entity;
 
-public class Vegetables{
+public class Vegetable {
 
     private long vegetablesId;
     private String name;
@@ -10,7 +10,7 @@ public class Vegetables{
     private double fats;
     private double weight;
 
-    public Vegetables(long vegetablesID, String name, float weight, double calorific, double protein, double carbohydrates, double fats) {
+    public Vegetable(long vegetablesID, String name, float weight, double calorific, double protein, double carbohydrates, double fats) {
         this.vegetablesId = vegetablesID;
         this.name = name;
         this.calorific = calorific*weight/100;

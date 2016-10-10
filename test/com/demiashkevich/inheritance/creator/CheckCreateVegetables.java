@@ -1,6 +1,6 @@
 package com.demiashkevich.inheritance.creator;
 
-import com.demiashkevich.inheritance.entity.Vegetables;
+import com.demiashkevich.inheritance.entity.Vegetable;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -27,9 +27,9 @@ public class CheckCreateVegetables {
     @Test
     public void checkCreateVegetables(){
         boolean expected = this.expected;
-        Vegetables vegetables = CreateVegetables.getVegetables(vegetableId, name, weight);
+        Vegetable vegetable = CreateVegetable.getVegetable(vegetableId, name, weight);
         boolean actual = false;
-        if(vegetables != null){
+        if(vegetable != null){
             actual = true;
         }
         Assert.assertSame(expected, actual);
