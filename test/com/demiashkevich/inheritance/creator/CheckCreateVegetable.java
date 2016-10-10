@@ -10,14 +10,14 @@ import java.util.Arrays;
 import java.util.Collection;
 
 @RunWith(Parameterized.class)
-public class CheckCreateVegetables {
+public class CheckCreateVegetable {
 
     private boolean expected;
     private int vegetableId;
     private String name;
     private float weight;
 
-    public CheckCreateVegetables(boolean expected, int vegetableId, String name, float weight) {
+    public CheckCreateVegetable(boolean expected, int vegetableId, String name, float weight) {
         this.expected = expected;
         this.vegetableId = vegetableId;
         this.name = name;
